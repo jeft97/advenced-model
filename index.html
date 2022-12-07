@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/Workside Logo.svg" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Workside-webisite</title>
+</head>
+<body>
+  <div class="wrapper">
+    <header class="navbar">
+            <h1 class="heading--1">
+                <img src="img/Workside Logo.svg" alt="workside logo">
+            </h1>
+            <nav>
+                <ul class="navigation">
+                    <li class="navigation__item"><a href="#" class="navigation__item--link">Find a job</a></li>
+                    <li class="navigation__item"><a href="#" class="navigation__item--link">Submit a job</a></li>
+                    <li class="navigation__item"><a href="#" class="navigation__item--link">Sponsor us</a></li>
+                </ul>
+            </nav>
+            <div class="user-profile">
+                <img src="img/Avatar.svg" alt="" class="user-profile--avatar">
+                <span class="user-profile--name">Olivia Benjamin</span>
+                <img src="img/Down Arrow.svg" alt="" class="icon">
+            </div>
+    </header>
+
+    <div class="filter">
+        <div class="filter__location">
+            <h3 class="heading--3">location</h3>
+            <form action="#" class="form">
+                <div class="form-group">
+                    <input type="checkbox"id="remote">
+                    <label for="remote">Remotes</label>
+                </div>
+            
+                <div class="form-group">
+                    <input type="checkbox"id="eua">
+                    <label for="eua">United States</label>
+                </div>
+                <div class="form-group">
+                    <input type="checkbox"id="australia">
+                    <label for="australia">Australia</label>
+                </div>
+                <div class="form-group">
+                    <input type="checkbox"id="poland">
+                    <label for="poland">Poland</label>
+                </div>
+                <div class="form-group">
+                    <input type="checkbox"id="canada">
+                    <label for="canada">Canada</label>
+                </div>
+            </form>
+        </div>
+        <div class="filter__payment">
+            <h3 class="heading--3">payment</h3>
+            <form action="#" class="form">
+                <div class="form-group">                 
+                    <input type="checkbox"id="verified">
+                    <label for="verified">Verified</label>
+                </div>
+                <div class="form-group">
+                    <input type="checkbox"id="unverified">
+                    <label for="unverified">Unverified</label>
+                </div>
+            </form>
+        </div>
+        <div class="filter__level">
+            <h3 class="heading--3">level</h3>
+            <form action="#" class="form">
+                <div class="form-group">                  
+                    <input type="checkbox"id="entry">
+                    <label for="entry">Entry</label>
+                </div>
+                <div class="form-group">                  
+                    <input type="checkbox"id="intermediate">
+                    <label for="intermediate">Intermediate</label>
+                </div>
+                <div class="form-group">
+                    <input type="checkbox"id="expert">
+                    <label for="expert">Expert</label>
+                </div>
+            </form>
+        </div>
+    </div>
+    <main class="main">
+        <div class="job-card">
+            <div class="job-card__header">
+                <div class="box-logo">
+                    <img src="img/First Job Logo.svg" alt="">
+                </div>
+                <div class="box-location">
+                    <h4 class="heading--4">Looking for a freelance frontend developer</h4>
+                    <small class="job-card--location">
+                        <img src="img/Location.svg" alt="">
+                        <span>Virginia, United States</span>
+                    </small>
+                </div>
+            </div>
+            <div class="job-card__footer">
+                <div class="tags">
+                    <span class="tag">Frontend</span>
+                    <span class="tag">Webdev</span>
+                </div>
+                <div class="tags">
+                    <img src="img/Checkmark Verified.svg" alt="">
+                    <span>Payment Verified</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="job-card">
+            <div class="job-card__header">
+                <div class="box-logo">
+                    <img src="img/Second Job Logo.svg" alt="">
+                </div>
+                <div class="box-location">
+                    <h4 class="heading--4">Product Designer needed</h4>
+                    <small class="job-card--location">
+                        <img src="img/Location.svg" alt="">
+                        <span>Remote</span>
+                    </small>
+                </div>
+            </div>
+            <div class="job-card__footer">
+                <div class="tags">
+                    <span class="tag">Design</span>
+                    <span class="tag">Research</span>
+                </div>
+                <div class="tags">
+                    <img src="img/Checkmark Not Verified.svg" alt="">
+                    <span>Payment Unverified</span>
+                </div>
+            </div>
+        </div>
+        <div class="job-card">
+            <div class="job-card__header">
+                <div class="box-logo">
+                    <img src="img/Third Job Logo.svg" alt="">
+                </div>
+                <div class="box-location">
+                    <h4 class="heading--4">SEO Specialist for an e-commerce shop</h4>
+                    <small class="job-card--location">
+                        <img src="img/Location.svg" alt="">
+                        <span>New York, United States</span>
+                    </small>
+                </div>
+            </div>
+            <div class="job-card__footer">
+                <div class="tags">
+                    <span class="tag">SEO</span>
+                </div>
+                <div class="tags">
+                    <img src="img/Checkmark Not Verified.svg" alt="">
+                    <span>Payment Unverified</span>
+                </div>
+            </div>
+        </div>
+        <div class="job-card">
+            <div class="job-card__header">
+                <div class="box-logo">
+                    <img src="img/Fourth Job Logo.svg" alt="">
+                </div>
+                <div class="box-location">
+                    <h4 class="heading--4">Migrate our website from Sketch to Figma</h4>
+                    <small class="job-card--location">
+                        <img src="img/Location.svg" alt="">
+                        <span>Mumbai, India</span>
+                    </small>
+                </div>
+            </div>
+            <div class="job-card__footer">
+                <div class="tags">
+                    <span class="tag">Frontend</span>
+                </div>
+                <div class="tags">
+                    <img src="img/Checkmark Verified.svg" alt="">
+                    <span>Designer</span>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div class="job-info">
+       <section class="job-info__header">
+            <div class="box-header">
+                <h2 class="heading--2">Frontend Developer</h2>
+                <small class="job-info__header--location">Virgina, United States</small>
+            </div>
+            <span>Posted <time>4 days ago</time></span> 
+       </section>
+       <section class="job-info__description">
+            <div class="box-description">
+                <h4 class="heading--4">Experience</h4>
+                <small class="job-info__description--tag">Expert</small>
+            </div>
+            <div class="box-description">
+                <h4 class="heading--4">Experience</h4>
+                <small class="job-info__description--tag">Virginia, United States</small>
+            </div>
+            <div class="box-description">
+                <h4 class="heading--4">Experience</h4>
+                <small class="job-info__description--tag">$100-$120/hr</small>
+            </div>
+       </section>
+       <section class="job-info__overview">
+            <h4 class="heading--4 u-mb-small">Company Overview</h4>
+            <p class="job-info__overview--text">
+                Dividstar was established in 1932 by Matthew Cohens in Virginia, 
+                United States. Dividstar has been the leader application for personal
+                finance over the past 10 decades and aim to continue holding that position. 
+                As times continue to evolve, we do too.
+            </p>
+       </section>
+
+       <section class="job-info__riquirements">
+            <h4 class="heading--4 u-mb-small">Job Requirements</h4>
+            <ul class="u-mb-small">
+                <li class="list-job">4 years of professional working experience.</li>
+                <li class="list-job">Understanding of Next.js, React, and Angular.</li>
+                <li class="list-job">Knowledge of REACT tools including React.js, Webpack, Enzyme,and Redux</li>
+            </ul>
+            <button class="btn btn--apply">Apply to job</button>
+       </section>
+    </div>
+  </div>  
+</body>
+</html>

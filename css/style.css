@@ -1,0 +1,380 @@
+:root{
+    --clr-bg:hsl(229, 33%, 12%);
+    --clr-primary:hsl(223, 32%, 18%);
+    --clr-primar-light:hsl(220, 19%, 63%);
+    --clr-blue-btn:hsl(218, 100%, 49%);
+    --clr-white:hsl(0, 0%, 100%);
+    --clr-black:hsl(0, 0%, 0%);
+
+    --font-s-h1:1.6rem;
+    --font-s-h2:2rem;
+    --font-s-h3:1.8rem;
+    --font-s-h4:1.6rem;
+    --font-s-default:1.6rem;
+    --font-s-small:1.4rem;
+
+    --font-f-default:'Roboto', sans-serif;
+
+    --max-w-grid:124rem;
+    --num-colum-grid:10;
+    --br-radius-default:.5rem;
+}
+
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+   scroll-behavior: auto;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+ font-family: var(--font-f-default);
+ font-size: 1.6rem;
+ font-weight: 400;
+ line-height: 1.5;
+ color: var(--clr-white);   
+}
+
+/*all heading*/
+.heading--2{
+    font-size: var(--font-s-h2);
+    text-transform: capitalize;
+}
+.heading--3{
+    font-size: var(--font-s-h3);
+    text-transform: capitalize;
+    margin-bottom: 1.6rem;
+}
+
+.heading--4{
+    font-size: var(--font-s-h4);
+}
+
+
+
+.wrapper{
+    width: 100%;
+    min-height: 100vh;
+    background-color: var(--clr-bg);
+
+    display: grid;
+    grid-template-rows: repeat(2, min-content);
+    grid-template-columns: [full-start]minmax(2rem, 1fr)[center-start]repeat(var(--num-colum-grid), [col-start] minmax(min-content, 12.5rem)[col-end])[center-end]minmax(4rem, 1fr)[full-end];
+    
+    grid-row-gap: 5rem;
+    grid-column-gap: 4rem;
+    align-items: start;
+
+}
+
+
+.navbar{
+    width: min(100%, var(--max-w-grid));
+    padding-top:4rem;
+    
+    grid-row: 1/ 2;
+    grid-column: center-start/center-end;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navigation{
+    display: flex;
+    align-items: center;
+    gap: 2.4rem;
+}
+.navigation__item{
+    list-style: none;
+    font-size: 1.8rem;
+}
+
+.navigation__item--link{
+    text-decoration: none;
+    color: var(--clr-primar-light);
+}
+
+
+.user-profile{
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+}
+
+.user-profile--name{
+    font-size: 1.8rem;
+}
+
+.filter{
+    grid-row: 2/ span 2;
+    grid-column: center-start / col-end 1;
+
+    display: flex;
+    flex-direction: column;
+    gap: 5.6rem;
+
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.form-group{
+    display: flex;
+    align-items: center;
+    gap: .8rem;
+    font-size: 1.6rem;
+    color: var(--clr-primar-light);
+}
+
+.form-group label{
+    font-weight: 400
+}
+
+.form-group input[type="checkbox"],
+.form-group input[type="checkbox"]:focus{
+    border-color:var(--clr-primar-light);
+    outline-color: var(--clr-primar-light);
+}
+
+
+.main{
+    
+    grid-row: 2/ span 2;
+    grid-column: col-start 2 / col-end 5;
+
+    
+
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+}
+
+.job-card{
+    width: 100%;
+    padding: 2.4rem;
+    border-radius: var(--br-radius-default);
+    background-color: var(--clr-primary);
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+}
+
+.job-card__header{
+    display: flex;
+    gap: 1.7rem;
+}
+.box-location{
+    display: flex;
+    flex-direction: column;
+    gap: .8rem;
+}
+
+.job-card--location{
+    display: flex;
+    align-items: center;
+    gap: .4rem;
+
+    color: var(--clr-primar-light);
+}
+
+.job-card__footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.tags{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+.tag{
+    padding: 1rem;
+    background-color: var(--clr-bg);
+    border-radius: .4rem;
+}
+
+
+.job-info{
+   background-color: var(--clr-primary);
+   grid-row: 2/ span 2;
+   grid-column: col-start 6 / center-end; 
+
+   padding: 4.6rem;
+   border-radius: var(--br-radius-default);
+
+   display: flex;
+   flex-direction: column;
+   gap: 3.6rem;
+}
+
+.job-info__header--location{
+    font-size: var(--font-s-default);
+    color: var(--clr-primar-light);
+}
+
+.job-info__header{
+    display: flex;
+    justify-content: space-between;
+}
+
+.box-header{
+    display: flex;
+    flex-direction: column;
+    gap: .4rem;
+}
+
+.job-info__description{
+    padding: 2.4rem;
+    border-radius: var(--br-radius-default);
+    background-color: var(--clr-bg);
+    
+    display: flex;
+    justify-content: space-between;
+}
+
+.job-info__description--tag{
+    color: var(--clr-primar-light);
+}
+
+.job-info__overview--text{
+    color: var(--clr-primar-light);
+    font-size: var(--font-s-default);
+}
+
+.list-job{
+    list-style: none;
+    color: var(--clr-primar-light);
+    
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+}
+.list-job:not(:last-child){
+    margin-bottom: 1.1rem;
+}
+
+.list-job::before{
+    content: "";
+    display: block;
+    background-image: url(../img/Checkmark\ Verified.svg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.list-job:last-child::before{
+    
+    align-self: flex-start;
+}
+
+.job-info__riquirements{
+    display: flex;
+    flex-direction: column;
+}
+
+.btn,
+.btn:focus{
+    appearance: none;
+    outline: 0;
+    border: none;
+    cursor: pointer;
+}
+
+.btn--apply{
+    background-color: var(--clr-blue-btn);
+    color: var(--clr-white);
+    align-self: flex-end;
+    padding: 1.6rem 2.4rem;
+    border-radius: var(--br-radius-default);
+    font-weight: 700;
+}
+
+/*utilities classes*/
+.u-mb-small{margin-bottom: 1.6rem !important;}
